@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 public class people extends Fragment {
     //顯示文字內容
-    private String text = "";
+    private String text ;
 
     @Override
     public void onAttach(Activity activity)
@@ -23,7 +23,7 @@ public class people extends Fragment {
         super.onAttach(activity);
 
         //取得MainActivity的方法，將文字放入text字串
-        three mMainActivity = (three) activity;
+        Three mMainActivity = (Three) activity;
         text = mMainActivity.peopleText();
     }
 

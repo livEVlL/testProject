@@ -3,6 +3,7 @@ package com.example.apple.testproject;
 import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,7 @@ import android.widget.TextView;
 
 public class money extends Fragment {
     //顯示文字內容
-    private String text = "";
+    private String text;
 
     @Override
     public void onAttach(Activity activity)
@@ -23,8 +24,10 @@ public class money extends Fragment {
         super.onAttach(activity);
 
         //取得MainActivity的方法，將文字放入text字串
-        three mMainActivity = (three) activity;
+        Three mMainActivity = (Three) activity;
         text = mMainActivity.moneyText();
+        Log.v("ppking" ,"text::"+ text);
+
     }
 
     @Override
@@ -44,7 +47,7 @@ public class money extends Fragment {
         mText.setText(text);
 
         //取得ImageView元件並帶入指定圖片
-        ImageView mImg = (ImageView) getActivity().findViewById(R.id.img);
-        mImg.setImageResource(R.drawable.money2);
+//        ImageView mImg = (ImageView) getActivity().findViewById(R.id.img);
+//        mImg.setImageResource(R.drawable.money2);
     }
 }
